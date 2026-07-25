@@ -1,0 +1,130 @@
+================================================================================
+RESUMEN DE RESULTADOS - MÉTODOS NUMÉRICOS
+================================================================================
+
+1. DATOS DEL PROBLEMA
+--------------------------------------------------------------------------------
+  Temperatura inicial:         95.0 °C
+  Temperatura objetivo:        40 °C
+  Rango de tiempo:             0 - 25 minutos
+  Número de datos:             6
+  Fuente de datos:             datos_experimentales.csv
+
+2. MODELO CUADRÁTICO
+--------------------------------------------------------------------------------
+  Ecuación:                    T(t) = 0.036429t² + -2.882143t + 95.178571
+  Coeficiente a:               0.036429 ± 0.001597
+  Coeficiente b:              -2.882143 ± 0.041599
+  Coeficiente c:               95.178571 ± 0.221121
+  Coeficiente R²:              0.999897
+  Bondad de ajuste:            El modelo explica el 99.99% de la variación
+
+3. MÉTODO DE BISECCIÓN
+--------------------------------------------------------------------------------
+  Intervalo inicial:           [32.000, 32.500]
+  Teorema de Bolzano:          f(32.0) * f(32.5) = -0.003386 < 0 ✓
+  Tolerancia:                  1e-06
+  Máximo de iteraciones:       100
+  Iteraciones realizadas:      16
+  Error final:                 0.000023%
+  Estado de convergencia:      Convergencia alcanzada
+
+4. RESULTADO PRINCIPAL
+--------------------------------------------------------------------------------
+  Tiempo para alcanzar 40°C:   32.474007 minutos
+  Equivalente en mm:ss:        32 min 28 seg
+  Temperatura en ese tiempo:   40.000000 °C
+  Solución analítica exacta:   32.474006 minutos
+  Error verdadero:             0.000001%
+  
+  ANÁLISIS:
+  El método de bisección encontró la raíz con una precisión excepcional,
+  demostrando la efectividad del método para problemas de este tipo.
+
+5. ANÁLISIS DE SENSIBILIDAD
+--------------------------------------------------------------------------------
+  Tolerancia    Tiempo (min)    Iteraciones    Error aproximado
+  -----------   -------------   ------------   -----------------
+  1e-02         32.468750        4              0.096246%
+  1e-03         32.472656        7              0.012029%
+  1e-04         32.474121        10             0.001504%
+  1e-05         32.473999        12             0.000376%
+  1e-06         32.474007        16             0.000023%
+  1e-07         32.474006        20             0.000003%
+  1e-08         32.474006        20             0.000000%
+
+  CONCLUSIONES DEL ANÁLISIS:
+  - La tolerancia más estricta (1e-08) requirió 20 iteraciones
+  - El tiempo obtenido converge a 32.474006 minutos
+  - El error se reduce aproximadamente a la mitad en cada iteración
+  - Se confirma la convergencia lineal del método de bisección
+
+6. COMPARACIÓN DE MODELOS
+--------------------------------------------------------------------------------
+  Modelo cuadrático:            32.4740 min
+  Modelo exponencial:           30.0963 min
+  Diferencia:                   2.3777 min (7.32%)
+  
+  ANÁLISIS COMPARATIVO:
+  El modelo exponencial (Ley de Newton) predice un tiempo menor porque
+  considera que la velocidad de enfriamiento es proporcional a la
+  diferencia de temperatura con el ambiente (aproximadamente 22.5°C).
+  
+  El modelo cuadrático, aunque tiene mejor ajuste estadístico (R² superior),
+  no es físicamente realista porque predeciría un enfriamiento sin límite,
+  mientras que el modelo exponencial tiende asintóticamente a la temperatura
+  ambiente.
+
+7. ARCHIVOS GENERADOS
+--------------------------------------------------------------------------------
+   CSV:
+     ✓ iteraciones_biseccion.csv      (Detalle de cada iteración)
+     ✓ analisis_sensibilidad.csv      (Resultados de sensibilidad)
+  
+   IMÁGENES:
+     ✓ graficas_completas.png         (Gráficas principales)
+     ✓ comparacion_modelos.png        (Comparación de modelos)
+  
+   REPORTES:
+     ✓ resumen_resultados.txt         (Este archivo)
+     ✓ informe_proyecto.pdf           (Informe completo en PDF)
+
+8. CONCLUSIONES FINALES
+--------------------------------------------------------------------------------
+  1. El método de bisección es robusto y convergió exitosamente en 16 iteraciones.
+  
+  2. El modelo cuadrático se ajusta excelentemente a los datos (R² = 0.999897),
+     pero el modelo exponencial es más realista físicamente.
+  
+  3. El tiempo calculado (32.47 minutos) es consistente con el comportamiento
+     esperado de enfriamiento de una bebida caliente.
+  
+  4. El análisis de sensibilidad confirma la convergencia estable del método.
+  
+  5. La implementación en Python es eficiente y reproduce correctamente los
+     resultados esperados.
+
+9. RECOMENDACIONES PARA TRABAJOS FUTUROS
+--------------------------------------------------------------------------------
+  ✓ Implementar otros métodos numéricos (Newton-Raphson, Secante)
+  ✓ Incorporar modelos más complejos (enfriamiento con convección y radiación)
+  ✓ Realizar experimentos adicionales con diferentes condiciones iniciales
+  ✓ Desarrollar una interfaz gráfica para el usuario final
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
