@@ -1,0 +1,37 @@
+# ============================================================
+# DEPENDENCIAS DEL PROYECTO
+# Método de Bisección para Enfriamiento de una Bebida
+# ============================================================
+
+# ------------------------------------------------------------
+# CÁLCULO NUMÉRICO Y CIENCIA DE DATOS
+# ------------------------------------------------------------
+numpy>=1.24.0
+pandas>=2.0.0
+scipy>=1.10.0
+
+# ------------------------------------------------------------
+# VISUALIZACIÓN DE DATOS
+# ------------------------------------------------------------
+matplotlib>=3.7.0
+
+# ------------------------------------------------------------
+# ENTORNO DE EJECUCIÓN (Jupyter Notebook)
+# ------------------------------------------------------------
+jupyter>=1.0.0
+notebook>=6.5.0
+ipykernel>=6.0.0
+
+# ------------------------------------------------------------
+# DEPENDENCIAS OPCIONALES (RECOMENDADAS)
+# ------------------------------------------------------------
+seaborn>=0.12.0          # Para gráficos más estilizados
+openpyxl>=3.1.0          # Para exportar a Excel
+xlrd>=2.0.0              # Para leer archivos Excel antiguos
+
+# ------------------------------------------------------------
+# HERRAMIENTAS DE DESARROLLO (OPCIONALES)
+# ------------------------------------------------------------
+black>=22.0.0            # Formateador de código
+pylint>=2.15.0           # Linter para Python
+pytest>=7.0.0            # Framework de pruebas
